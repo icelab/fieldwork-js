@@ -11,7 +11,7 @@ npm install --save icelab/fieldwork-js
 ## Usage
 
 ```js
-import fieldwork form 'fieldwork-js'
+import fieldwork from 'fieldwork-js'
 
 const client = fieldwork({
   projectId: 'your_project_id',
