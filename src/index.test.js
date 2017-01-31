@@ -19,8 +19,8 @@ beforeEach(() => {
 })
 
 const config = {
-  projectId: '8bce381e-afb0-421b-8d25-60410b6a9110',
-  projectPublicKey: 'JfXPMWxjo4669wiMrD_NIg',
+  projectId: 'example_id',
+  projectPublicKey: 'example_key',
 }
 
 const client = fieldwork(config)
