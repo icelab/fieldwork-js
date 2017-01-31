@@ -1,0 +1,22 @@
+{
+  extends: [
+    "standard",
+  ],
+  "globals": {
+    "beforeEach": true,
+    "expect": true,
+    "jest": true,
+    "test": true
+  },
+  rules: {
+    "comma-dangle": [2, "always-multiline"]
+  },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: "module",
+  },
+  plugins: [
+    "standard",
+  ]
+}
+
