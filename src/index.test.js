@@ -25,6 +25,12 @@ const config = {
 
 const client = fieldwork(config)
 
+test('It requires configuration', () => {
+  expect(() => {
+    fieldwork({})
+  }).toThrow('Project ID and key must be passed.')
+})
+
 test('It should track an event', () => {
   client.trackEvent('order_created_by_js_client', {
     amount: 34.95,
