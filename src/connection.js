@@ -17,7 +17,7 @@ function parseJSON(response) {
 
 export default function connection(projectId, projectPublicKey, baseUrl) {
   baseUrl = baseUrl != null ? baseUrl : config.FIELDWORK_API_BASE_URL;
-  const projectBaseUrl = `${baseUrl}/${projectId}`;
+  const projectBaseUrl = `${baseUrl}${config.FIELDWORK_API_PATH}/${projectId}`;
   const authorization = window.btoa(`${projectPublicKey}:`);
 
   return (endpoint, data) => {
