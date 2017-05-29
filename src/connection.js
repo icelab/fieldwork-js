@@ -15,12 +15,13 @@ function parseJSON (response) {
   return response.json()
 }
 
-export default function connection (projectId, projectPublicKey) {
-  const baseURL = `${config.FIELDWORK_API_BASE_URL}/${projectId}`
+export default function connection (projectId, projectPublicKey, baseUrl) {
+  baseUrl = (baseUrl != null) ? baseUrl : config.FIELDWORK_API_BASE_URL
+  const projectBaseUrl = `${baseUrl}/${projectId}`
   const authorization = window.btoa(`${projectPublicKey}:`)
 
   return (endpoint, data) => {
-    const url = `${baseURL}${endpoint}`
+    const url = `${projectBaseUrl}${endpoint}`
     const encodedData = window.JSON.stringify(data)
     return window.fetch(url, {
       method: 'POST',
