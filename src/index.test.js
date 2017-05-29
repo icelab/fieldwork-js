@@ -26,7 +26,7 @@ const client = fieldwork(config);
 test("It requires configuration", () => {
   expect(() => {
     fieldwork({});
-  }).toThrow("Project ID and key must be passed.");
+  }).toThrow("Project ID and public key must be passed.");
 });
 
 test("It should track an event", () => {
