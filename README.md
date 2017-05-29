@@ -34,6 +34,19 @@ client.addEntity('product', {
 })
 ```
 
+If you want to use a custom API endpoint you can override it at initialisation
+time:
+
+```js
+import fieldwork from 'fieldwork-js'
+
+const client = fieldwork({
+  projectId: 'your_project_id',
+  projectPublicKey: 'your_project_public_key',
+  apiBaseUrl: 'https://custom-base-url.goes/here'
+})
+```
+
 ## Development
 
 We’re using [yarn](https://yarnpkg.com/) for development:
